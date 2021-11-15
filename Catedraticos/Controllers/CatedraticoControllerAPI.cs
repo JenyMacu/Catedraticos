@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Curso.Controllers
+namespace Catedraticos.Controllers
 {
     [Route("api/Catedratico")]
     [ApiController]

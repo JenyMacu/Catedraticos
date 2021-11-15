@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Catedraticos.Controllers
+namespace Curso.Controllers
 {
     public class CursoController : Controller
     {
@@ -26,7 +26,7 @@ namespace Catedraticos.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await _context.tbl_Catedratico.ToListAsync());  
+            return View(await _context.tbl_Cursos.ToListAsync());  
         }
         [HttpPost]
         public async Task<IActionResult> Catedratico([Bind("CodigoCurso, NombreCurso, EstadoCurso")] CursoModel cursomodel)
