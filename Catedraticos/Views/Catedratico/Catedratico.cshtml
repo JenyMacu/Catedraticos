@@ -1,0 +1,35 @@
+﻿@model Catedraticos.Models.CatedraticoModel
+
+<h1>Módulo -- Creación de nuevas Catedratico</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Catedratico">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!--Nombre de la persona-->
+            <div class="form-group">
+                <label asp-for="NombreCatedratico" class="control-label"></label>
+                <input asp-for="NombreCatedratico" class="form-control" />
+                <span asp-validation-for="NombreCatedratico" class="text-danger"></span>
+            </div>
+            <!--Apellido de la persona-->
+            <div class="form-group">
+                <label asp-for="ApellidoCatedratico" class="control-label"></label>
+                <input asp-for="ApellidoCatedratico" class="form-control" />
+                <span asp-validation-for="ApellidoCatedratico" class="text-danger"></span>
+            </div>
+            <!--Edad de la persona-->
+            <div class="form-group">
+                <label asp-for="EdadCatedratico" class="control-label"></label>
+                <input asp-for="EdadCatedratico" class="form-control" />
+                <span asp-validation-for="EdadCatedratico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Grabar Datos" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<a asp-action="Index">Regresar</a>
+

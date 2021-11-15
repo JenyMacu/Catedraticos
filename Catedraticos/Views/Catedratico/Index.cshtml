@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Catedraticos.Models.CatedraticoModel>
+
+@{ 
+    ViewData["Title"] = "Catedratico";
+}
+
+<h1>Catedratico</h1>
+<p>
+    <a asp-action ="Personas">Crear nuevo Catedratico</a>
+</p>
+<table class=" table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCatedratico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoCatedratico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCatedratico)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var registros in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => registros.NombreCatedratico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => registros.ApellidoCatedratico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => registros.EstadoCatedratico)
+            </td>
+            <td>
+                <a asp-action="EditaCatedratico" asp-route-id="@registros.CodigoCatedratico">Editar</a> |
+                <a asp-action="ConsultaCatedratico" asp-route-id="@registros.CodigoCatedratico">Consultar</a> |
+                <a asp-action="BorraCatedratico" asp-route-id="@registros.CodigoCatedratico">Borrar</a> |
+            </td>
+
+        </tr>
+            }
+    </tbody>
+</table>

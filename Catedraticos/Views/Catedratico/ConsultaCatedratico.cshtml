@@ -1,0 +1,26 @@
+﻿@model Catedraticos.Models.CatedraticoModel
+
+<h1>Módulo Consultas de Catedraticos</h1>
+<hr/>
+
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.NombreCatedratico)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.NombreCatedratico)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ApellidoCatedratico)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ApellidoCatedratico)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.EdadCatedratico)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.EdadCatedratico)
+    </dd>
+</dl>
+<a asp-action="Index">Regresar</a>
