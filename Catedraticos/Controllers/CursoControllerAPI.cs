@@ -14,13 +14,13 @@ namespace Catedraticos.Controllers
     [ApiController]
     public class CursoControllerAPI : Controller
     {
-        private readonly iCatedraticoRepository _ctocatedratico;
+        private readonly iCursoRepository _ctocurso;
         private readonly IMapper _mapper;
 
         //Constructor
-        public CursoControllerAPI(iCatedraticoRepository ctoCurso, IMapper mapper)
+        public CursoControllerAPI(iCursoRepository ctoCurso, IMapper mapper)
         {
-            _ctocatedratico = ctoCurso;
+            _ctocurso = ctoCurso;
             _mapper = mapper;
         }
         [HttpGet]
@@ -39,7 +39,7 @@ namespace Catedraticos.Controllers
         [HttpGet("{nCodigoCurso:int}", Name = "GetCursoByCodigo")]
         public IActionResult GetCursoByCodigo(int nCodigoCurso)
         {
-            var ListarCurso = _ctocatedratico.GetCatedratico(nCodigoCurso);
+            var ListarCurso = _ctocurso.GetCurso(nCodigoCurso);
             if (ListarCurso == null)
             {
                 NotFound();
@@ -56,7 +56,7 @@ namespace Catedraticos.Controllers
             }
             var curso = _mapper.Map<CursoModel>(cursoDto);
 
-            if (!_ctocurso.CrearCurso(catedratico))
+            if (!_ctocurso.CrearCurso(Curso))
             {
                 ModelState.AddModelError("", $"Ocurrió un Error al grabar el registro { curso.CodigoCurso}");
                 return StatusCode(500, ModelState);
