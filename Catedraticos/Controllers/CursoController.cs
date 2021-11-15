@@ -29,7 +29,7 @@ namespace Curso.Controllers
             return View(await _context.tbl_Cursos.ToListAsync());  
         }
         [HttpPost]
-        public async Task<IActionResult> Catedratico([Bind("CodigoCurso, NombreCurso, EstadoCurso")] CursoModel cursomodel)
+        public async Task<IActionResult> Curso([Bind("CodigoCurso, NombreCurso, EstadoCurso")] CursoModel cursomodel)
         {
             if (ModelState.IsValid)
             {
