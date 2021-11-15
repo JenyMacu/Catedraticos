@@ -18,7 +18,7 @@ namespace Catedraticos.Models
         [Required(ErrorMessage = "El campo nombre persona es obligatorio")]                       
         [Column(TypeName ="varchar(40)")]  
         [Display(Name ="Nombre de Catedrático")]
-        public string NombrePersona { get; set; }
+        public string NombreCatedrtico { get; set; }
         [Required(ErrorMessage = "El campo apellido Catedrático es obligatorio")]
         [Column(TypeName ="varchar(35)")]
         [Display(Name ="Apellido de Catedrático")]

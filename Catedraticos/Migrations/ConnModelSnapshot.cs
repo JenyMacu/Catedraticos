@@ -18,30 +18,30 @@ namespace Catedraticos.Migrations
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EjercicioSeccionA.Models.PersonaModel", b =>
+            modelBuilder.Entity("Catedraticos.Models.CatedraticoModel", b =>
                 {
-                    b.Property<int>("CodigoPersona")
+                    b.Property<int>("CodigoCatedratios")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApellidoPersona")
+                    b.Property<string>("ApellidoCatedraticos")
                         .IsRequired()
                         .HasColumnType("varchar(35)");
 
-                    b.Property<int>("EdadPersona")
+                    b.Property<int>("EdadCatedratico")
                         .HasColumnType("int");
 
-                    b.Property<string>("EstadoPersona")
+                    b.Property<string>("EstadoCatedratico")
                         .HasColumnType("varchar(3)");
 
-                    b.Property<string>("NombrePersona")
+                    b.Property<string>("NombreCatedratico")
                         .IsRequired()
                         .HasColumnType("varchar(35)");
 
-                    b.HasKey("CodigoPersona");
+                    b.HasKey("CodigoCatedratico");
 
-                    b.ToTable("tbl_personas");
+                    b.ToTable("tbl_catedratico");
                 });
 #pragma warning restore 612, 618
         }
