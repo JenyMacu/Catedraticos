@@ -12,5 +12,6 @@ namespace Catedraticos.Connection
         public Conn(DbContextOptions<Conn> options) : base(options) { }
 
         public DbSet<CatedraticoModel> tbl_Catedratico { get; set; }
+        public DbSet<CursosModel> tbl_Cursos { get; set; }
     }
 }
